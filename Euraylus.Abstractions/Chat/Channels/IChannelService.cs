@@ -11,4 +11,5 @@ public interface IChannelService {
     void JoinChannel( string channel_uuid, IUser user );
     void JoinChannel( IChannel channel, IUser user );
     void LeaveChannel( IUser user );
+    IChannel? GetChannelByUuid( string uuid );
 }
