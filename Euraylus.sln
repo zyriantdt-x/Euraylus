@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euraylus.Server", "Euraylus.Server\Euraylus.Server.csproj", "{4FDA7E41-CF3A-405A-84BB-250C10102BA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euraylus.Abstractions", "Euraylus.Abstractions\Euraylus.Abstractions.csproj", "{FF936397-D635-439A-9B3B-BDB73310C90B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euraylus.Users", "Euraylus.Users\Euraylus.Users.csproj", "{58A624B3-22EA-40CD-A9F5-734F0C3A5FF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euraylus.Storage", "Euraylys.Storage\Euraylus.Storage.csproj", "{F70A87CE-E4E2-4C4D-837F-9B093FFBDA89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E74DFDC1-174D-49BD-9DC8-613AAA55D6D8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euraylus.Chat", "Euraylus.Chat\Euraylus.Chat.csproj", "{3B62B7D2-0251-4975-BDA0-4CA45AD8727B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FDA7E41-CF3A-405A-84BB-250C10102BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FDA7E41-CF3A-405A-84BB-250C10102BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FDA7E41-CF3A-405A-84BB-250C10102BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FDA7E41-CF3A-405A-84BB-250C10102BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF936397-D635-439A-9B3B-BDB73310C90B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF936397-D635-439A-9B3B-BDB73310C90B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF936397-D635-439A-9B3B-BDB73310C90B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF936397-D635-439A-9B3B-BDB73310C90B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A624B3-22EA-40CD-A9F5-734F0C3A5FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A624B3-22EA-40CD-A9F5-734F0C3A5FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A624B3-22EA-40CD-A9F5-734F0C3A5FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A624B3-22EA-40CD-A9F5-734F0C3A5FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F70A87CE-E4E2-4C4D-837F-9B093FFBDA89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F70A87CE-E4E2-4C4D-837F-9B093FFBDA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F70A87CE-E4E2-4C4D-837F-9B093FFBDA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F70A87CE-E4E2-4C4D-837F-9B093FFBDA89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B62B7D2-0251-4975-BDA0-4CA45AD8727B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B62B7D2-0251-4975-BDA0-4CA45AD8727B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B62B7D2-0251-4975-BDA0-4CA45AD8727B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B62B7D2-0251-4975-BDA0-4CA45AD8727B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {244C2489-0429-4E10-A3F1-921BCD958A46}
+	EndGlobalSection
+EndGlobal
