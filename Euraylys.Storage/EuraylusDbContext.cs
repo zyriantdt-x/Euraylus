@@ -6,6 +6,7 @@ namespace Euraylus.Storage;
 public class EuraylusDbContext : DbContext {
     public DbSet<UserDataSet> UserDataSet { get; set; }
     public DbSet<ChannelDataSet> ChannelDataSet { get; set; }
+    public DbSet<ChannelPrivilegesSet> ChannelPrivilegesSet { get; set; }
 
     public EuraylusDbContext( DbContextOptions<EuraylusDbContext> options ) : base( options ) {
     }

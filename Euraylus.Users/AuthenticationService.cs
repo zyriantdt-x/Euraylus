@@ -1,4 +1,5 @@
 ﻿using Euraylus.Chat.Channels;
+using Euraylus.Chat.ChatUsers;
 using Euraylus.Server.Messages;
 using Euraylus.Server.Sessions;
 using Euraylus.Users.MessageComposers;
@@ -12,14 +13,14 @@ using System.Threading.Tasks;
 namespace Euraylus.Users;
 internal class AuthenticationService : IAuthenticationService {
     private readonly IUserService user_service;
-    private readonly IChannelService channel_service;
+    private readonly IChannelJoiner channel_joiner;
     private readonly IMessageSender message_sender;
 
     public AuthenticationService(IUserService user_service,
-                                 IChannelService channel_service,
+                                 IChannelJoiner channel_joiner,
                                  IMessageSender message_sender ) {
         this.user_service = user_service;
-        this.channel_service = channel_service;
+        this.channel_joiner = channel_joiner;
         this.message_sender = message_sender;
     }
 
@@ -54,7 +55,7 @@ internal class AuthenticationService : IAuthenticationService {
         LogoutMessageComposer logout_composer = new();
         this.message_sender.SendMessage( user.Session!, logout_composer );
 
-        this.channel_service.LeaveChannel( user );
+        this.channel_joiner.LeaveChannel( user );
 
         user.Session!.User = null;
         user.Session = null;

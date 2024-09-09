@@ -1,4 +1,6 @@
 ﻿using Euraylus.Chat.Channels;
+using Euraylus.Chat.Channels.Privileges;
+using Euraylus.Chat.ChatUsers;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -18,9 +20,13 @@ public static class ServiceBuilder {
         services.AddSingleton<IChannelMessageReceiver, ChannelMessageReceiver>();
         services.AddSingleton<IChannelMessageSender, ChannelMessageSender>();
         services.AddSingleton<IChannelService, ChannelService>();
+
+        // privileges
+        services.AddSingleton<IChannelPrivilegeFactory, ChannelPrivilegeFactory>();
+        services.AddSingleton<IChannelPrivilegeService, ChannelPrivilegeService>();
     }
 
-    public static void AddChatUserServices( this IServiceCollection services ) { 
-        
+    public static void AddChatUserServices( this IServiceCollection services ) {
+        services.AddSingleton<IChannelJoiner, ChannelJoiner>();
     }
 }

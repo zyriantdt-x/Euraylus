@@ -1,4 +1,5 @@
 ﻿using Euraylus.Chat.Channels;
+using Euraylus.Chat.ChatUsers;
 using Euraylus.Server.Sessions;
 using System;
 using System.Collections.Generic;
@@ -10,10 +11,10 @@ namespace Euraylus.Server.Messages.Handlers.Chat;
 internal class JoinChannelMessageHandler : IMessageHandler {
     public string Header => "JOIN_CHANNEL";
 
-    private readonly IChannelService channel_service;
+    private readonly IChannelJoiner channel_joiner;
 
-    public JoinChannelMessageHandler( IChannelService channel_service ) {
-        this.channel_service = channel_service;
+    public JoinChannelMessageHandler( IChannelJoiner channel_joiner ) {
+        this.channel_joiner = channel_joiner;
     }
 
     public void Handle( ISession session, IMessage message ) {
@@ -21,6 +22,6 @@ internal class JoinChannelMessageHandler : IMessageHandler {
         if( channel_uuid == null )
             return;
 
-        this.channel_service.JoinChannel( channel_uuid, session.User );
+        this.channel_joiner.JoinChannel( channel_uuid, session.User );
     }
 }

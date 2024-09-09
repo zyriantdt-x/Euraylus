@@ -1,4 +1,5 @@
 ﻿using Euraylus.Chat.Channels;
+using Euraylus.Chat.ChatUsers;
 using Euraylus.Server.Sessions;
 using Euraylus.Users;
 using System;
@@ -11,12 +12,12 @@ namespace Euraylus.Server.Messages.Handlers.Chat;
 internal class KickChannelUserMessageHandler : IMessageHandler {
     public string Header => "KICK_CHANNEL_USER";
 
-    private readonly IChannelService channel_service;
+    private readonly IChannelJoiner channel_joiner;
     private readonly IUserService user_service;
 
-    public KickChannelUserMessageHandler( IChannelService channel_service,
+    public KickChannelUserMessageHandler( IChannelJoiner channel_joiner,
                                           IUserService user_service ) {
-        this.channel_service = channel_service;
+        this.channel_joiner = channel_joiner;
         this.user_service = user_service;
     }
 
@@ -34,6 +35,6 @@ internal class KickChannelUserMessageHandler : IMessageHandler {
         if( user.ChatUser == null )
             return;
 
-        this.channel_service.LeaveChannel( user );
+        this.channel_joiner.LeaveChannel( user );
     }
 }
